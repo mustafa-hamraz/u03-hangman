@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(87, 189, 130);
+    font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+
+
+
+
+
+
+
+
+/*****     Login Section    *****/
+#login{
+    width: 100%;
+    padding-top: 8%;
+    text-align: center;
+    color: azure;
+}
+#welcome-text{
+    margin-bottom: 5rem;
+    font-size: 3rem;
+}
+#username-question{
+    margin-bottom: 0.5rem;
+}
+#nameinput{
+    height: 2rem;
+    width: 30%;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    border: 0.09rem solid azure;
+    border-radius: 0.8rem 0 0 0.8rem;
+    text-align: center;
+    outline: none;
+}
+#greetings-button{
+    height: 2rem;
+    width: 3.5rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    border: 0.09rem solid azure;
+    outline: none;
+}
+#greetings-button:hover{
+    background-color: rgb(87, 189, 130);
+    color: azure;
+    border: 0.2rem solid azure;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****     Instruction Section    *****/
