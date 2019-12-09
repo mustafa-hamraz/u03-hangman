@@ -7,50 +7,21 @@ body{
     background-color: rgb(87, 189, 130);
     font-family: Comic Sans, Comic Sans MS, cursive;
 }
-
-
-
-
-
-
-
-
-
-/*****     Login Section    *****/
-#login{
-    width: 100%;
-    padding-top: 8%;
-    text-align: center;
+button{
+    background-color: rgb(110, 187, 142);
+    font-size: 15px;
     color: azure;
-}
-#welcome-text{
-    margin-bottom: 5rem;
-    font-size: 3rem;
-}
-#username-question{
-    margin-bottom: 0.5rem;
-}
-#nameinput{
     height: 2rem;
-    width: 30%;
-    font-family: Comic Sans, Comic Sans MS, cursive;
-    border: 0.09rem solid azure;
-    border-radius: 0.8rem 0 0 0.8rem;
-    text-align: center;
+    border-radius: 0.5rem;
+    border: 0.2rem outset azure;
     outline: none;
+    text-shadow: 1px 1px 3px #000000;
+    box-shadow: 2px 2px 6px #000000;
 }
-#greetings-button{
-    height: 2rem;
-    width: 3.5rem;
-    border-radius: 0 0.8rem 0.8rem 0;
-    font-family: Comic Sans, Comic Sans MS, cursive;
-    border: 0.09rem solid azure;
-    outline: none;
-}
-#greetings-button:hover{
+button:hover{
     background-color: rgb(87, 189, 130);
     color: azure;
-    border: 0.2rem solid azure;
+    border: 0.2rem ridge azure;
     cursor: pointer;
 }
 
@@ -63,6 +34,43 @@ body{
 
 
 
+/*****     Login Section    *****/
+#login{
+    width: 100%;
+    padding-top: 5%;
+    text-align: center;
+    color: azure;
+    ;
+}
+#welcome-text{
+    margin: 0 0 7rem 0;
+    font-size: 4rem;
+    /*text-shadow: 0.5px 0.5px 0.5px #000000;*/
+}
+#game-emoji{
+    font-size: 4.5rem;
+    display: inline-block;
+}
+#username-question{
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px #000000;
+}
+#nameinput{
+    height: 2rem;
+    width: 30%;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    border: 0.09rem solid azure;
+    border-radius: 0.8rem 0 0 0.8rem;
+    text-align: center;
+    outline: none;
+    box-shadow: 2px 2px 6px #000000;
+}
+#greetings-button{
+    height: 2rem;
+    width: 3.5rem;
+    border-radius: 0 0.8rem 0.8rem 0;
+}
 
 
 
@@ -74,4 +82,73 @@ body{
 
 
 
-/*****     Instruction Section    *****/
+
+
+
+
+
+
+
+
+
+
+/*****     help Section    *****/
+#help-section{
+    background-image: url("/img/help_zlatan.png");
+    background-color: rgb(87, 189, 129);
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#help-question{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(87, 189, 129, 0.521);;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+}
+#help-question > p {
+    font-size: 2.5rem;
+    text-shadow: 0 0 8px #0000FF, 0 0 5px rgb(241, 245, 14);
+    margin-top: 9rem;
+}
+#help-question > button{
+    width: 15rem;
+    height: 3rem;
+    margin-top: 1rem;
+}
+#no-button{
+    background-color:rgb(189, 90, 87);
+}
+#no-button:hover{
+    background-color: rgb(182, 45, 41);
+}
+#yes-button:hover{
+    background-color: rgb(30, 236, 116);
+}
+
+@media only screen and (max-width: 550px){
+    #welcome-text{
+        margin: 0 0 5rem 0;
+        font-size: 2.5rem;
+    }
+    #game-emoji{
+        font-size: 3rem;
+    }
+    #username-question{
+        font-size: 1rem;
+    }
+    #nameinput{
+        width: 50%
+    }
+    #help-question > p {
+        font-size: 1.7rem;
+        margin-top: 9rem;
+    };
+}

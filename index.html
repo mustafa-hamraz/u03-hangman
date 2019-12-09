@@ -9,14 +9,24 @@
 </head>
 <body>
     <section id="login"> 
-        <h1 id="welcome-text">Hänga Gubben</h1>
+        <h1 id="welcome-text"><div id="game-emoji">&#127918;</div>Rädda Zlatan</h1>
         <h4 id="username-question">Vad heter du?</h4>
         <input id="nameinput" >
-        <button onclick="greetings()" id="greetings-button">Bekräfta</button>
+        <button onclick="greetings()" id="greetings-button">&#x23CE;</button>
     </section>
     
-    <section id="instruction-section">
-        <p id="welcome-text">välkomen</p>
+    <section id="help-section">
+        <div id="help-question">
+            <p id="welcome-username">Hej --namn--, Zlatan behöver din hjälp!</p>
+            <p>Vill du rädda Zlatan?</p>
+            <button onclick="yesFunction()" id="yes-button">Ja, Det finns bara en Zlatan!</button><br>
+            <button onclick="noFunction()" id="no-button">Nej, låt honom dö!</button>
+        </div>
+        
+    </section>
+
+    <section id="instraction-section">
+        <p>instruction</p>
     </section>
 
     <main id="game-section">
