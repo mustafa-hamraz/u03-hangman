@@ -59,3 +59,7 @@ function noFunction(){
 
 
 ///*****     Instraction Section     *****///
+function startGame(){
+    instructionSection.style.display = "none";
+    gameSection.style.display = "block";
+}
