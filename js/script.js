@@ -54,6 +54,7 @@ function startGame(){
     instructionSection.style.display = "none";
     gameSection.style.display = "block";
     hidenWord(); //ropar på funktionen som skapar toma rutor
+
 }
 
 
@@ -62,20 +63,73 @@ function startGame(){
 
 //               ***********     MAIN GAME SECTION     ***********
 
-const wordList = ["finland", "italien", "tyskland", "spanien", "polen", "lettland"];    // Array med spelets alla ord
-let selectedWord = wordList[Math.floor(Math.random() * wordList.length)]                // Slumpgenerator från arrayen ovan
+const wordList = ["FINLAND", "ITALIEN", "TYSKLAND", "SPANIEN", "POLEN", "LETTLAND"];    // Array med spelets alla ord
+let selectedWord = wordList[Math.floor(Math.random() * wordList.length)];              // Slumpgenerator från arrayen ovan
+let selectedWordArray = [...selectedWord];
+let alphabetPosition = [];
+let screenSymbols = [];
+let gusses = 0;
 
 
-function hidenWord(){                                                     // Funktion som skapar rutor beroande på antal bokstäverna
-    for(i =0; i < selectedWord.length; i++){
-        let guessList = document.createElement("LI");                     // Skapar en <li> node
-        let textGuessLetter = document.createTextNode('🔒');               // Skapar en text node
-        guessList.appendChild(textGuessLetter);                           // Appenderar texten i <li>
-        document.getElementById("guess-list").appendChild(guessList);     // Appenderar <li> i HTML
-        document.getElementById("guess-list").style.fontSize = "50px";    // Ändrar text storlek
-        document.getElementById("guess-list").style.color = "white";      // Ändrar text färg
+let ulList = document.getElementById("guess-list"); 
+function hidenWord(){        // Funktion som skapar rutor beroande på antal bokstäverna
+    while(ulList.firstChild){
+        ulList.removeChild(ulList.firstChild);
     }
-} 
-   
-// Håller antalet gissningar som gjorts
-let guesses = 0;
+    for(i =0; i < selectedWord.length; i++){
+        let guessList = document.createElement("LI");                // Skapar en <li> node
+        let textGuessLetter = document.createTextNode('🔒');         // Skapar en text node
+        guessList.appendChild(textGuessLetter);                     // Appenderar texten i <li>                      
+        ulList.appendChild(guessList);     // Appenderar <li> i HTML
+        ulList.style.fontSize = "50px";    // Ändrar text storlek
+        ulList.style.color = "white";      // Ändrar text färg
+    }
+    
+    for(let i = 0; i < selectedWordArray.length; i++){
+        screenSymbols.push('🔒');
+    }
+}
+let alphabet;
+let keyList = document.getElementById('key-list');
+keyList.addEventListener('click', function(event){
+    let target = event.target;
+    alphabet = String(target.innerText);
+    checkForMatch(alphabet)
+})
+
+function checkForMatch(alphabetKey){
+    let trueOrFalse = selectedWordArray.indexOf(alphabetKey);
+    if(trueOrFalse != -1){
+        findMatchPosition(alphabetKey)
+    }else{
+        gusses++;
+    }
+}
+
+function findMatchPosition(trueMatch){
+    alphabetPosition.length = 0;
+    for(let i = 0; i < selectedWordArray.length; i++){
+        if(selectedWordArray[i] == trueMatch){
+            alphabetPosition.push(alphabet);
+        }else{
+            alphabetPosition.push('🔒');
+        }
+    }
+    screenSymbolsFunction();
+}
+
+function screenSymbolsFunction(){
+    for(let i = 0; i < alphabetPosition.length; i++){
+        if(alphabetPosition[i] !== '🔒'){
+            screenSymbols[i] = alphabetPosition[i];
+            replaceHidenWord(i);
+        } 
+    }
+}
+
+function replaceHidenWord(index){
+    let replaceNode = document.getElementById('guess-list').childNodes[index];
+    replaceNode.innerText = screenSymbols[index];
+}
+
+console.log(selectedWord);
