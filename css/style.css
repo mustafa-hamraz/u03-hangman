@@ -59,7 +59,7 @@ button:hover{
 #nameinput{
     height: 2rem;
     width: 30%;
-    font-family: Comic Sans, Comic Sans MS, cursive;
+    font-family: 'Roboto', sans-serif;
     border: 0.09rem solid azure;
     border-radius: 0.8rem 0 0 0.8rem;
     text-align: center;
@@ -141,9 +141,19 @@ button:hover{
 
 
 
+/*****     Instraction Section    *****/
+#instraction-section{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: azure;
+    font-size: 2.5rem;
+    text-align: center;
+}
 
-/*****     help Section    *****/
 
+
+/*****     Main Game Section    *****/
 #game-img{
     width: 50%;
     position: static;
@@ -184,12 +194,19 @@ button:hover{
     width: 3rem;
 }
 
-h1{
+#game-over{
     font-size: x-large;
     color: azure;
-    left: 50%;
-    top: 50%;
+    position: absolute;
+    left: 35%;
+    top: 3%;
+}
 
+#win-game{
+    color: azure;
+    position: absolute;
+    top: 20%;
+    left: 15%;
 }
 
 
@@ -221,6 +238,64 @@ h1{
         margin-top: 10rem;
     };
     #help-section{
-        height: 500px;
+        background-image: url("../img/help_zlatan2.png");
+        height: 400px;
+    }
+
+    /*****     Instraction Section    *****/
+    #instraction-section{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: azure;
+    font-size: 2rem;
+    text-align: center;
+    }
+
+    /*****     Main Game Section    *****/
+    #game-img{
+        width: 100%;
+        position: absolute;
+        top: 7%;
+        left: 0%;
+    }
+
+    #guess-list{
+        position: absolute;
+        left: 10%;
+        top: 0%;
+        list-style-type: none;
+    }
+    #guess-letter{
+        color: azure;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        height: 2rem;
+        width: 4rem;
+    }
+
+    #key-list{
+        position: absolute;
+        left: 3%;
+        top: 78%;
+        right: 3%;
+
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+    .btn{
+        margin: 0.2rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #game-over{
+        font-size: x-large;
+        color: azure;
+        position: absolute;
+        left: 35%;
+        top: 3%;
     }
 }

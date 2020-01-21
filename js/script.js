@@ -89,7 +89,7 @@ function mainGame(){
             let textGuessLetter = document.createTextNode('🔒');         // Skapar en text node
             guessList.appendChild(textGuessLetter);                     // Appenderar texten i <li>                      
             ulList.appendChild(guessList);     // Appenderar <li> i HTML
-            ulList.style.fontSize = "50px";    // Ändrar text storlek
+            ulList.style.fontSize = "40px";    // Ändrar text storlek
             ulList.style.color = "white";      // Ändrar text färg
         }
         
