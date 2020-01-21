@@ -135,7 +135,6 @@ function mainGame(){
             if(alphabetPosition[i] !== '🔒'){
                 screenSymbols[i] = alphabetPosition[i];
                 win--;
-                console.log(win);
                 replaceHidenWord(i);
             } 
         }
@@ -174,18 +173,19 @@ function mainGame(){
             gamePhoto.src = 'img/warning4.png';
         }
         else if(gussesNumber === 5){
-            document.getElementById('sound0').play();
             gamePhoto.src = 'img/warning5.png';
-            gameOver()
+            gameOver();
         }
     }
 }
 
 function gameOver(){
+    document.getElementById('fuckedup').play();
     gameSection.style.display = "none";
     tryAgain.style.display = "block";
 }
 function gameWin(){
+    document.getElementById('woohoo').play();
     gameSection.style.display = "none";
     winningPage.style.display = "block";
 }

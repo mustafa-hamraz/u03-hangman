@@ -5,7 +5,7 @@
 }
 body{
     background-color: rgb(87, 189, 130);
-    font-family: Comic Sans, Comic Sans MS, cursive;
+    font-family: 'Roboto', sans-serif;
 }
 button{
     background-color: rgb(110, 187, 142);
@@ -45,7 +45,7 @@ button:hover{
 #welcome-text{
     margin: 0 0 7rem 0;
     font-size: 4rem;
-    /*text-shadow: 0.5px 0.5px 0.5px #000000;*/
+    text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 #game-emoji{
     font-size: 4.5rem;
@@ -199,6 +199,7 @@ h1{
 
 
 @media only screen and (max-width: 500px){
+    /*****     Login Section    *****/
     #welcome-text{
         margin: 0 0 5rem 0;
         font-size: 2.5rem;
@@ -212,8 +213,14 @@ h1{
     #nameinput{
         width: 50%
     }
+
+
+    /*****     help Section    *****/
     #help-question > p {
         font-size: 1.7rem;
         margin-top: 10rem;
     };
+    #help-section{
+        height: 500px;
+    }
 }
